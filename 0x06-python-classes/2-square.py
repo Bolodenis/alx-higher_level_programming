@@ -1,20 +1,26 @@
 #!/usr/bin/python3
-"""
-The class type defination
 
 """
+This module contains a definition for a Square class.
+"""
+
+
 class Square:
     """
-    the class represent a square.
-    attributes:
-    __init__(self, size=0): size of the square with value zero
+    This class represents a square geometric shape.
+
+    Attributes:
+        __size (int): The size of the square. It is a private attribute.
     """
+
     def __init__(self, size=0):
         """
-        Initializes a square
-         Args:
-            size (int): size of aiii side of the square
-         Raises:
+        The constructor for the Square class.
+
+        Args:
+            size (int, optional): The size of the square. Defaults to 0.
+
+        Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
         """
