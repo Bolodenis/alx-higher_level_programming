@@ -29,5 +29,5 @@ class Square:
         a public instance method that returns the current square area
 
         """
-        square_area = self.__size * self.__size
-        return square_area
+        return  = self.__size ** 2
+        
