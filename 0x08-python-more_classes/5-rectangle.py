@@ -65,10 +65,6 @@ class Rectangle:
             string += "\n".join("#" * self.__width for j in range(self.__height))
         return string
 
-    def __repr__(self):
-        """Returns a string representation of the rectangle for reproduction"""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
     def __del__(self):
         """Deletes the rectangle"""
         print("Bye rectangle...")
