@@ -43,33 +43,30 @@ class Rectangle:
 
     def area(self):
         """
-        method that finds the area of the rectangle
-        Returns: area of the rectangle
+        Method that finds the area of the rectangle.
+        Returns: area of the rectangle.
         """
         rectangle_area = self.width * self.height
         return rectangle_area
 
     def perimeter(self):
         """
-        method that finds the perimeter of a rectangle
-        Returns: rectangle perimeter
+        Method that finds the perimeter of a rectangle.
+        Returns: rectangle perimeter.
         """
         if self.width == 0 or self.height == 0:
             return (0)
-        else:
-            perimeter = 2 * (self.width + self.height)
-        return perimeter
+        rectangle_perimeter = 2 * (self.width + self.height)
+        return rectangle_perimeter
 
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width for j in range(self.__height))
+            string += "\n".join("#" * self.__width
+                                for j in range(self.__height))
         return string
 
     def __repr__(self):
-        """
-        Return a string representation of the rectangle.
-        This string can be used with eval() to recreate a new instance.
-        """
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+        """returns a string representation of the rectangle for reproduction"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
