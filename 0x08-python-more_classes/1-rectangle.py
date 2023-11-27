@@ -3,6 +3,7 @@
 Defines class Rectangle
 """
 
+
 class Rectangle:
     """
     Representation of a rectangle
@@ -15,25 +16,12 @@ class Rectangle:
             width: Represents the width of the rectangle.
             height: Represents the height of the rectangle.
         """
-        self.__width = width
-        self.__height = height
-
-    @property
-    def width(self):
-        """ Get/set the current width of the rectangle."""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
-        if value < 0:
-            raise ValueError("Width must be >= 0")
-        self.__width = value
+        self.width = width
+        self.height = height
 
     @property
     def height(self):
-        """ Get/set the current height of the rectangle."""
+        """Get/set the current height of the rectangle."""
         return self.__height
 
     @height.setter
@@ -43,3 +31,16 @@ class Rectangle:
         if value < 0:
             raise ValueError("Height must be >= 0")
         self.__height = value
+
+    @property
+    def width(self):
+        """Get/set the current width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("Width must be an integer")
+        if value < 0:
+            raise ValueError("Width must be >= 0")
+        self.__width = value
