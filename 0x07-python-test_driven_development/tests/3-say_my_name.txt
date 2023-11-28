@@ -1,0 +1,30 @@
+# Importing the say_my_name function from the module
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+# Test case 1: Testing for either first/ second name given
+>>> say_my_name("Denis")
+My name is Denis 
+
+#Test case 2: first argument being a non string 
+>>> say_my_name(4, "Denis")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test case 3: Second name as an integer
+>>> say_my_name("Denis", 4)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+# Test case 4: Testing more than two arguments
+>>> say_my_name("Denis", "Otieno", "Bollo")
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+# Test case 5: Passing empty string arguments
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
