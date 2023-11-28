@@ -1,0 +1,79 @@
+# Importing the add_integer function from the module
+>>> add_integer = __import__("0-add_integer").add_integer
+
+# Checking for module docstring:
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1
+True
+
+# Checking for function docstring:
+>>> f = __import__("0-add_integer").add_integer.__doc__
+>>> len(f) > 1
+True
+
+# Test case 1: Testing positive integer
+>>> add_integer(1, 1)
+2
+
+# Test case 2: Adding positive with negative number
+>>> add_integer(5, -1)
+4
+
+# Test case 3: Adding negative with positive number
+>>> add_integer(-4, 2)
+-2
+
+# Test case 4: Testing with the default value of b
+>>> add_integer(2)
+100
+
+# Test case 5: Testing int with float
+>>> add_integer(3, 2.5)
+5
+
+# Test case 6: Testing float with int
+>>> add_integer(5.5, 2)
+7
+
+# Test case 7: Addition of zero
+>>> add_integer(0, 0)
+0
+
+# Test case 8: Checking super long int
+>>> add_integer(999999999999999999999999999999, 1)
+1000000000000000000000000000000
+
+# Test case 9: Testing with non-integer/float number
+>>> add_integer(5, "python")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+# Test case 10: Testing non-integer/float with number
+>>> add_integer("5", 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# Test case 11: Testing with None
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# Test case 12: Checking number with bool
+>>> add_integer(0, False)
+0
+
+# Test case 13: Checking no args
+>>> add_integer(1)
+99
+
+# Test case 15: Checking more than 2 args
+Traceback (most recent call last):
+    File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+     exec(compile(example.source, filename, "single",
+    File "<doctest 0-add_integer.txt[19]>", line 1, in <module>
+     add_integer(1, 2, 3)
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
