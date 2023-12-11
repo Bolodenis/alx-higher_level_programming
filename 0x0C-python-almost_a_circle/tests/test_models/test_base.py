@@ -118,3 +118,4 @@ class TestBase(unittest.TestCase):
     def test_fjs_None(self):
         """Tests from_json_string with an empty string"""
         self.assertEqual([], Base.from_json_string(None))
+
