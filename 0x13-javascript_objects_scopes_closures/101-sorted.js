@@ -1,9 +1,5 @@
 #!/usr/bin/node
-exports.dict = {
-	  89: 1,
-	  90: 2,
-	  91: 1,
-	  92: 3,
-	  93: 1,
-	  94: 2
-};
+const fs = require('fs');
+const a = fs.readFileSync(process.argv[2], 'utf8');
+const b = fs.readFileSync(process.argv[3], 'utf8');
+fs.writeFileSync(process.argv[4], a + b);
